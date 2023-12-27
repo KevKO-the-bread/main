@@ -1,1 +1,15 @@
+dynamic arrays= no fixed size problem  => keine werte am anfang eingeben, default in Java=10
+We add element in the next empty spot (push element in arrays)
 
+When array full => we take a new bigger empty array from a diffrent RAM location and copy all the old values into the new array, the old arrays gets deleted
+But it takes more time to create a new array O(n)=> double size of array (empty space vs. more time)
+
+write elemnt O(1)
+Insert in middle O(n)
+
+Power Series: o(n)
+Array 1= size1
+A2=2
+A3=4
+A4=8
+2^n>= O(n)=> o(2*n)  don´t care anout constants
