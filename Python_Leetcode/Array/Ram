@@ -1,1 +1,8 @@
+Advanced data structures like Arrays store information in RAM (measured in bytes)
+byte= 8 bit, position in 0 or 1 (computer language)
+Integer= 4 byte bzw. 32 bits
+character= 1 byte
+
+RAM = Block of data, every value has an address
+RAM is contigous= value=1, address=0. value=12356 address=4  => always 4 byte for values for integers
 
