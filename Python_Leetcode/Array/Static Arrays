@@ -1,1 +1,43 @@
+Array= contiginous block of data
+RAM= Random Access Memory=> direct access by index
 
+2 main functions: Reading
+Index starts with 0,1,2,3,4...
+myArray[i]=> i=0
+for and while to loop through
+
+
+Writing:
+writing must be contiguous
+remove/overwrite=> ez
+insert new element to end => O=1
+insert to beginning=> shift all other element one place further => O(n), n=lenght
+disadvantage: shifts need many operations
+
+OCD= big of one operation
+
+
+biggest limitation for static arrays(fixed size arrays) 
+python and java have dynamic arrays as default, never run out of space
+
+
+
+
+
+
+In der Informatik gibt es eine Art, die Leistung von Algorithmen und Funktionen zu beschreiben. Sie heißt Big-O-Notation. Die Big-O-Notation sagt aus, wie sich die Leistung des Algorithmus oder der Funktion ändert, wenn die Eingabegröße zunimmt.
+
+Im Kontext von ArXiv wird die Big-O-Notation verwendet, um die Leistung bestimmter Operationen zu beschreiben. Zum Beispiel könnte die Big-O-Notation für das Suchen nach Dokumenten O(log n) sein. Das bedeutet, dass die Zeit, die zum Suchen eines Dokuments benötigt wird, logarithmisch mit der Anzahl der Dokumente im Repository wächst.
+
+Logarithmisch bedeutet, dass die Zeit langsam ansteigt, wenn die Anzahl der Dokumente zunimmt. Das macht die Suche auch für große Repositories relativ effizient.
+
+Hier sind einige weitere Beispiele für Big-O-Notationen in ArXiv:
+
+    O(1): Die Leistung der Operation ist unabhängig von der Eingabegröße.
+    O(n): Die Leistung der Operation wächst linear mit der Eingabegröße.
+    O(n²): Die Leistung der Operation wächst quadratisch mit der Eingabegröße.
+    O(n³): Die Leistung der Operation wächst kubisch mit der Eingabegröße.
+
+Je kleiner die Big-O-Notation, desto effizienter ist der Algorithmus oder die Funktion.
+
+In einfachen Worten bedeutet das, dass die Big-O-Notation ein nützliches Werkzeug ist, um zu verstehen, wie gut ein Algorithmus oder eine Funktion funktioniert.
