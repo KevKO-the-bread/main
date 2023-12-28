@@ -1,0 +1,25 @@
+url= https://leetcode.com/problems/baseball-game/
+
+class Solution(object):
+    def calPoints(self, operations):
+        score=[]
+        for i in operations:
+            if i =="+":
+                points= score[-1]+score[-2]
+                score.append(points)
+            elif i=="D":
+                points=score[-1]
+                score.append(points)
+            elif i== "C":
+                score.pop()
+            else:
+                score.append(i)
+        sum=0
+        for i in score:
+            sum+= i
+        return sum
+    
+liste=[5, 6 , "+", "D", "C"]
+
+result= Solution().calPoints(liste)
+print(result)
