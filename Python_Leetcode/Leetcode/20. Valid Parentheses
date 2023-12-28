@@ -1,0 +1,32 @@
+class Solution(object):
+    def isValid(self, s):
+        score=0
+        for i in s:
+            if i=="{" or i == "[" or i== "(":
+                score+=1
+            if i=="}" or i == "]" or i== ")":
+                score-=1
+        if score==0:
+            return "true"
+        else:
+            return "false"
+        
+var="()(){})"
+
+result=Solution().isValid(var)
+print(result)
+
+class Solution:
+    def isValid(self, s):
+        stack = []
+        closeToOpen = {')': '(', ']': '[', '}': '{'}
+        for c in s:
+            if c in closeToOpen:
+                if stack and stack[-1] == closeToOpen[c]:
+                    stack.pop()
+                    continue
+                else:
+                    return False
+            else:
+                stack.append(c)
+        return True if not stack else False
