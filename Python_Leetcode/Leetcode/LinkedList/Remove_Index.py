@@ -22,13 +22,11 @@ class LinkedList:
     def remove_last_element(self):
         if self.head is None:
             return
-        curr = self.head
         
-        if curr.next is None:
-            self.head=self.head.next
-            curr=None
+        if self.head.next is None:
+            self.remove_first_element()
             return
-
+        curr = self.head
         while curr.next.next:
             curr = curr.next
 
