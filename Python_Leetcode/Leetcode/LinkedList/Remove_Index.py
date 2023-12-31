@@ -47,6 +47,15 @@ class LinkedList:
     def remove_any_element(self, value):
         if self.head is None:
             return
+            
+        if self.head.data==value:
+            self.remove_first_element()
+            return
+            
+        if self.tail.data==value:
+            self.remove_last_element()  
+            return
+        
         curr=self.head 
         prev=None
         
