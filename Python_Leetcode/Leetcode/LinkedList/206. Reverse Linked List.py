@@ -27,10 +27,13 @@ class LinkedList:
             curr.next = prev  # Reverse current node's pointer
             prev = curr  # Update previous node
             curr = temp  # Update current node
+        temp=self.head 
+        self.head= self.tail #tail und head vertauschen
+        self.tail= temp
 
 
     def iterate(self):
-        curr = self.tail
+        curr = self.head
         while curr:
             val = curr.data
             yield val
@@ -42,11 +45,15 @@ def main():
     items.add(1)
     items.add(2)
     items.add(3)
-
     items.reverse()
+
+    
 
     for i in items.iterate():
         print(i)
+
+if __name__ == "__main__":
+    main()
 
 if __name__ == "__main__":
     main()
