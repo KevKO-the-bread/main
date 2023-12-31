@@ -18,18 +18,6 @@ class LinkedList:
         else:
             self.tail.next = new_node
             self.tail = new_node
-
-    def reverse(self):
-        curr = self.head
-        prev = None
-        while curr:
-            temp = curr.next  # Save reference to next node
-            curr.next = prev  # Reverse current node's pointer
-            prev = curr  # Update previous node
-            curr = temp  # Update current node
-        temp=self.head 
-        self.head= self.tail 
-        self.tail= temp
         
     def remove_last_element(self):
         if self.head is None:
@@ -48,10 +36,15 @@ class LinkedList:
         self.tail = curr
 
 
+    
     def remove_first_element(self):
         if self.head is None:
             return
-        self.head=self.head.next
+        temp = self.head
+        self.head = self.head.next
+        temp.next = None  # Ensure the removed node doesn't reference any other node
+        temp = None  # Deallocate the memory for the removed node
+
         
     def remove_any_element(self, value):
         if self.head is None:
