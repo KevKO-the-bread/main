@@ -1,1 +1,44 @@
-asd
+//Create Table
+
+CREATE DATABASE IF NOT EXISTS `shopdb` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `shopdb`;
+-- Exportiere Struktur von Tabelle shopdb.customer
+CREATE TABLE IF NOT EXISTS `customer` (
+  `Customer_id` int(11) NOT NULL,
+  `Lastname` varchar(20) DEFAULT NULL,
+  `Firstname` varchar(20) DEFAULT NULL,
+  `Address` varchar(80) DEFAULT NULL,
+  `test` INT AUTO_INCREMENT PRIMARY KEY,
+FOREIGN KEY (`elternteil_id`) REFERENCES `elternteil` (`elternteil_id`)
+  )
+
+//insert
+INSERRT INTO customer (`Customer_id`, `Lastname`, `Firstname`)
+  VALUES(asd, qwe, yxc, asd)
+
+//update
+UPDATE customer
+  SET ID=12
+  WHERE ID=5
+
+//delete
+DELETE FROM customer
+  WHERE ID=2
+
+//LIKE
+WHERE id="_asd%"
+
+//QUERY
+SELECT
+FROM
+WHERE
+ORDER BY ASC/ DESC
+GROUP BY 
+
+//EQUI-JOINT
+WHERE custoemr.ID=product.ID
+
+//NormalJoint
+from table
+innerjoin table2 on table.id=table2.id
+innerjoin table2 on table2.id=table3.id
