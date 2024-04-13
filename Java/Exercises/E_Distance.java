@@ -7,7 +7,7 @@ public class E_Distance {
 		this.y=y;
 	}
 		
-	public double edistance(qwertz other) {
+	public double edistance(E_Distance other) {
 		double part1 = Math.pow(x - other.x, 2);
 	    double part2 = Math.pow(y - other.y, 2);
 		return Math.sqrt(part1+ part2);
